@@ -154,12 +154,10 @@ Navigate to “Rules” on the Things menu.
 
 1. Start in the top left hand corner. To the left of the paintbrush, create a name for your rule. As an example, 
 create the rule: “At 10pm, turn off bedroom light”. 
-
 Don’t worry about the “If” statement below the Rule name, this will populate as you add your devices to the Rule space.
 
 2. In Rule creation, the basic logic is: if (A), then (B). Optionally, you can change “if” to “while” and combine 
 multiple inputs for (A), and multiple outputs for (B). 
-
 Let’s start by grabbing our input: time. Drag the ‘clock’ from the bottom of the screen to the left side of the Rule space. 
 Since we want something to occur at 10pm, set the time to ‘10pm’.
 
@@ -168,11 +166,10 @@ side of the Rule space.
 
 4. To complete the rule, select the desired property of the smart light that you want to set at 10pm. 
 In this example, we want the bedroom light to turn “Off” at 10pm. Go to the light's drop down menu and select ‘Off’. 
-
 The clock and light bulb rectangles should now be connected by a black line, and the “If” statement under 
 your Rule name should be updated to reflect the logic of this rule.
 
-Click on the back-arrow button in the upper left-hand corner of the Rule space (next to the name), 
+5. Click on the back-arrow button in the upper left-hand corner of the Rule space (next to the name), 
 to save the rule and return to the main Rule overview page.
 
 ### View/Edit, Disable/Enable, or Remove a Rule
