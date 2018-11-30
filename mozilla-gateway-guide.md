@@ -6,21 +6,26 @@
 Congratulations on choosing to set up your own private Smart Home Gateway. This guide provides an overview of
 what is currently referred to as the “Things Gateway” by Mozilla. It is an alpha prototype, v0.6. Hereafter we will
 usually just refer to it as the "gateway". 
-The gateway lets you directly monitor and control your home over the web, even though all your smart home data stays 
-in your home, on the gateway. The gateway often bypasses the need to 
-purchase separate hubs or to download apps for each different manufacturer.
+The gateway lets you directly monitor and control your home over the web. But unlike many smart home and IoT 
+products on the market, your smart home data stays in your home (on the gateway). The gateway can often bypass 
+the need for you to purchase extra IoT hubs. And instead of downloading a different app for each brand, 
+you can manage them all in one place through a web browser.
 
 This guide will explain how to set up your gateway, connect smart home devices, create rules to automate 
-your home, plus a few additional tips.
+your home, experiment with voice and text-based commands, and a few additional tips.
 
 ### Things Gateway Running on Raspberry Pi
 
 The Things Gateway software can be installed onto an 8GB or larger microSD card which is inserted into a 
 Raspberry Pi. We recommend the latest model, such as the RPi 3 B+. You can optionally attach Zigbee and 
-Z-wave radios that connect to the RPi over USB.
+Z-wave radios that connect to the RPi over USB. To run the gateway software on other devices, refer to the 
+"Supported Hardware" section of the project [wiki](https://github.com/mozilla-iot/wiki/wiki). Other than some 
+changes in installation and initial setup, most of this guide is agnostic to the actual gateway hardware. 
 
-images to upload:
-[uSD image] + [Things Gateway w/case] + [USB power supply] + (optional) [Zigbee, Z-Wave USB dongles]
+The following image shows a typical collection of smart home devices, the top row shows the Raspberry Pi, power supply 
+and a Zigbee USB dongle. The bottom row shows a door sensor, smart plug, smart bulb, and motion sensor.
+
+<img src="/images/image53.png" alt="smart home devices" width="400">
 
 ### Flashing the microSD Card
 
@@ -30,6 +35,8 @@ image onto the microSD card (8GB or larger) that is inserted into your computer.
 [distributors](https://docs.iot-bus.com/en/latest/getting-started/iot-bus-getting-started-with-mozilla.html) 
 sell the Raspberry Pi with a microSD card that has been pre-flashed with the Mozilla Things 
 Gateway image. Once flashed, insert the microSD card into the Raspberry Pi.
+
+<img src="/images/image54.png" alt="uSD card" width="160">
 
 ## II. First Time Setup
 
@@ -41,17 +48,17 @@ Make sure the microSD card is plugged into the Raspberry Pi, and optionally plug
 Zigbee and Z-wave, into one of the four USB ports. The additional USB dongles allow the gateway to communicate 
 with devices that don’t use Wi-Fi, Bluetooth, or other IP networking protocols.
 
-![power on gateway](/images/image1.png)
+<img src="/images/image1.png" alt="power on gateway">
 
-Plug the gateway into a power outlet using at least a 2A USB power supply. (Typically USB power adapters used to charge 
-cell phones will not supply sufficient power to run a Raspberry Pi gateway.) You will need to wait 2-3 minutes 
+Plug the gateway into a power outlet using at least a 2A USB power supply. (Cell phone charging USB power adapters 
+will not provide sufficient power to run a Raspberry Pi gateway.) After applying power, you will need to wait 2-3 minutes 
 for compressed software images to be unpacked, and for various install scripts to run, before proceeding to the next step.
 
 ### Connect to Wi-Fi
 
 Using your laptop, connect to the Wi-Fi network called `Mozilla IoT Gateway`. 
 
-![Mozilla IoT Gateway SSID](/images/image8.png)
+<img src="/images/image8.png" alt="Mozilla IoT Gateway SSID" width="400">
 
 (Note that it takes several minutes after first time power on before the network name will appear in the scanned 
 list of Wi-Fi networks.)
@@ -62,7 +69,7 @@ this step will connect your gateway as a Wi-Fi client of your home network. Alte
 the gateway using an ethernet cable to your local area network (LAN), for example by plugging into a LAN port of 
 your home Wi-Fi router. 
 
-![ssid list](/images/image19.png)
+<img src="/images/image19.png" alt="SSID list" width="800">
 
 You can change the Wi-Fi network that the gateway is connected to by powering it up in a new location, where the 
 previous network is not accessbile. It will revert to broadcasting the `Mozilla IoT Gateway` network name, and you 
@@ -80,11 +87,11 @@ and securely, whether at home or remote.
 
 Type `http://gateway.local` into your web browser’s address bar to find your gateway on your home network. 
 
-![browse to gateway.local](/images/image9.png)
+<img src="/images/image9.png" alt="gateway.local" width="600">
 
 If a web page does not load, you can type the IP address of the gateway instead. 
 
-![browse to gateway by IP address](/images/image25.png)
+<img src="/images/image25.png" alt="gateway IP address" width="600">
 
 You can determine the gateway IP address by pinging the hostname gateway.local from the command line terminal 
 of your computer.
@@ -93,20 +100,22 @@ For example: `$ ping gateway.local` or if using Windows 10: `$ ping -4 gateway.l
 
 To open a terminal window using Microsoft Windows, type `cmd` into the search bar.
 
-![windows cmd](/images/image38.png)
+<img src="/images/image38.png" alt="windows cmd" width="600">
 
 To open a terminal window using MacOS, type `terminal` into the search bar.
 
-![macOS terminal](/images/image39.png)
+<img src="/images/image39.png" alt="macos terminal" width="600">
 
 **TIP**: If `http://gateway.local` or `http://<IP_address>` can’t be found, check to make sure your laptop is connected to 
 the same home Wi-Fi network that you selected in the previous section. To make sure the gateway is connected, you can log 
 into your home Wi-Fi router to look up the gateway IP address. Look at the router's DHCP client list and search for 
 the name `gateway` or look for a MAC address starting with `b8:27:eb...`.
 
-Once you have successfully connected to the gateway's web service, a Welcome page will load.
+<img src="/images/image55.png" alt="router DHCP client list" width="800">
 
-![welcome screen to choose subdomain](/images/image22.png)
+Once you have successfully connected to the gateway in your browser, a Welcome page will load.
+
+<img src="/images/image22.png" alt="create subdomain" width="800">
 
 At this step you need to think of a unique web address name that will hereafter be used to securely access your 
 Things Gateway over the Internet. Type your chosen name, enter your preferred email, and select “Create.”
@@ -121,7 +130,7 @@ Finally, create an account which you will thereafter use to log in to your gatew
 and manage its devices from any web browser, anywhere in the world. (Additional user accounts can be added later. 
 See `Settings => Users`, and follow a similar account creation process.)
 
-![create user account](/images/image5.png)
+<img src="/images/image5.png" alt="create user account" width="800">
 
 ### Bookmark Your Success!
 
@@ -133,18 +142,20 @@ We recommend that you **bookmark** the web address on all devices that you have 
 It is also handy to save your Things Gateway as a **web application on the home screen** of your phones and tablets.
 
 On Android phones/tablets: 
+
 * In Firefox: Select the “add to home” icon in the address bar (circled in red) to add an app icon to your home screen. 
+
 * In Chrome: Select “Add Things to Home screen”. 
 
-![firefox add to home](/images/image3.png)
-![firefox as web app](/images/image23.png)
+<img src="/images/image3.png" alt="firefox add to home" width="400"> 
+<img src="/images/image23.png" alt="firefox as web app" width="400">
 
 On iPhones and iPads:  
 * In Safari: Select the Share icon, and then “Add to Home Screen”. 
 * (Note that iOS does not currently support an "add to home screen" function for Firefox or Chrome browsers.)
 
-![safari add to home](/images/image35.png)
-![safari create web app](/images/image37.png)
+<img src="/images/image35.png" alt="safari share" width="400"> 
+<img src="/images/image37.png" alt="safari add to home" width="800">
 
 ## III. Adding and Managing Smart Home Devices
 
@@ -157,7 +168,7 @@ Pick a device to add and prepare it for pairing. Typical preparation steps for Z
 * Bettery-operated devices such as door/window sensors, motion detectors, pushbuttons, dimmer switches, leak detectors, 
 temperature sensors, and more: remove tab from battery, or plug in battery, to power on
 
-![sensor battery tab](/images/image6.png)
+<img src="/images/image6.png" alt="sensor battery tab" width="200">
 
 **TIP**: Some devices come pre-paired with controllers or IoT hubs. First follow the manufacturers instructions to do 
 a **factory reset** on those devices before attempting to pair them with your Mozilla gateway. See the Appendix 
@@ -166,15 +177,16 @@ for more tips on pairing new devices.
 When you are ready to add devices to your Things Gateway, we recommend that you provision devices one at a time. 
 First load your secure web address (format [your_subdomain].mozilla-iot.org) and log in to your account.
 
-From the main “Things” page, select the ![plus icon](/images/image10.png) button at the bottom right corner. 
+From the main “Things” page, select the <img src="/images/image10.png" alt="plus" width="20">
+button at the bottom right corner. 
 The gateway will begin scanning to discover unprovisioned and unconfigured devices that are nearby.
 
-![click plus to scan things](/images/image33.png)
+<img src="/images/image33.png" alt="scan things" width="800">
 
 When a new device is found, it will appear on the Things scan page. Rename the device, then select 
 ‘Save’ to add it, and ‘Done’ when you are finished.
 
-![scan found device](/images/image2.png)
+<img src="/images/image2.png" alt="save things" width="800">
 
 **TIP**: When naming your smart devices, we recommend using a name that helps you remember where they are 
 located in your home. For example, “Bedroom Light”. Choose simple names that will be easy to remember and use if 
