@@ -181,13 +181,67 @@ to grey. You can re-enable the rule by toggling the switch element back to the r
 * Remove. To remove (permanently delete) a rule, hover over the rule rectangle and click on the (x) in the upper 
 right-hand corner.
 
-## V. Floorplan: Map out your devices
+## V. Floorplan: Map the Location of Your Devices
+
+The Floorplan allows you to view your devices as they are positioned within your home. It shows all your devices, 
+consistent with what you would see on the Things page, but it lets you see their states mapped over the layput of 
+your home. You can still click an icon to change its state, the same as you would on the Things page. However, 
+one interaction difference is that you need to click-and-hold on an icon to open the thing's detailed view. 
+
+### Create a Floorplan
+
+First sketch a floorplan of your home, and save it as a digital image. You can draw one by hand and take a picture of it, 
+or use an illustrator tool. (If you take a picture of the floorplan using your smartphone, you can upload the image 
+directly to your gateway from the phone's browser.)
+
+**TIP**: Save your digital drawing as an SVG file with white lines and a transparent background, using a tool like Inkscape or Sketch, for a minimalist look.
+
+### Upload Floorplan
+
+Next click on the pencil icon in the lower right corner of the floorplan page to enter edit mode. An "upload file" 
+button will appear -- click on it to select the floorplan image to be uploaded. 
+
+After the floorplan image is uploaded, make sure you are still in edit mode, and then drag the thing icons from the top 
+of the page onto the floorplan. Click the check mark in the lower right corner when done.
 
 ## VI. Add-Ons: Extend your Gateway’s Capabilities
 
+The gateway has an add-ons system so that you can extend its capabilities. A few add-ons are installed by default (Web Thing, Zigbee, and Z-Wave) so that your gateway will work with a large number of commercial devices right out of the box. However, you can boost support for additional devices if they are supported by an Add-on. You'll find the Add-on page under Settings.
+
+### Locate and Install More Add-Ons As Needed
+
+From the Settings menu, select Add-Ons. To enable more Add-Ons, click the (+) button to browse the add-on list, then select ` + Add` to enable any additional add-ona. For example, if you have TP-Link or HomeKit compatible devices at home, you can install their add-ons, then discover and pair the devices so that they can be managed by your Mozilla gateway. 
+
+New add-ons will continue to be developed to enable control of newly supported devices, so check back periodically at 
+the Add-ons list. You can submit requests for additional device support in the issues tab of the 
+[gateway software development site](https://github.com/mozilla-iot/gateway/issues).
+
 ## VII. Experiments
 
+Try out experimental new features like the Smart Assistant in Experiments.
+
+### Enable Smart Assistant
+
+From the Settings menu, select Experiments, and then check the box to enable the Smart Assistant. 
+
+### Using the Smart Assistant
+
+Once enabled, the smart assistant page can be selected from the main navigation menu. It lets you use voice and 
+messaging commands to control the things in your home. The same commands are possible whether using voice or typing text input. 
+
+The web interface shows both typed and spoken commands that were made recently, as well as the result of the command. If a portion of a command that you spoke was misinterpreted, or just missing, try again. Remember to speak load and clear near your PC's microphone.
+
+You can give it commands like “Turn the kitchen light on” and it will respond to you to confirm the action. So far it can understand a basic set of commands to turn devices on and off, set levels, set color and set color temperatures.
+
+The first time you click on the microphone icon, your browser will ask for permission to use your computer’s microphone. From the popup dialog, click the “Remember this decision” checkbox, then select “Allow”.
+
 ## VIII. Additional Settings
+
+Browse the other pages listed under the Settings menu in order to find additional configuration and capabilities of the Things Gateway. 
+
+## IX. Support
+
+For support, please sign up to our IoT Discourse forum (https://discourse.mozilla.org/c/iot) or email iot@mozilla.com or post issues on [github](https://github.com/mozilla-iot/gateway/issues). 
 
 ## Appendix: More on Pairing and Unpairing Smart Devices
 
