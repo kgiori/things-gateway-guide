@@ -1,11 +1,14 @@
-# Smart Home Gateway User Guide
-by Mozilla
+# Smart Home Gateway v0.6 User Guide
+![Project Things by Mozilla](/images/ThingsGateway-Mozilla.png)
 
 ## I. Introduction
 
-Your Smart Home Gateway by Mozilla is an alpha prototype, often referred to as the “Things Gateway”. 
-The gateway lets you directly monitor and control your home over the web, often bypassing the need to 
-purchase separate hubs and download apps for each different manufacturer.
+Congratulations on choosing to set up your own private Smart Home Gateway. This guide provides an overview of
+what is currently referred to as the “Things Gateway” by Mozilla. It is an alpha prototype, v0.6. Hereafter we will
+usually just refer to it as the "gateway". 
+The gateway lets you directly monitor and control your home over the web, even though all your smart home data stays 
+in your home, on the gateway. The gateway often bypasses the need to 
+purchase separate hubs or to download apps for each different manufacturer.
 
 This guide will explain how to set up your gateway, connect smart home devices, create rules to automate 
 your home, plus a few additional tips.
