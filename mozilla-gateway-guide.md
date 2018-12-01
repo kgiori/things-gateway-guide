@@ -6,10 +6,11 @@
 Congratulations on choosing to set up your own private Smart Home Gateway. This guide provides an overview of
 what is currently referred to as the “Things Gateway” by Mozilla. It is an alpha prototype, v0.6. Hereafter we will
 usually just refer to it as the "gateway". 
-The gateway lets you directly monitor and control your home over the web. But unlike many smart home and IoT 
-products on the market, your smart home data stays in your home (on the gateway). The gateway can often bypass 
-the need for you to purchase extra IoT hubs. And instead of downloading a different app for each brand, 
-you can manage them all in one place through a web browser.
+
+The gateway lets you directly monitor and control your home over the web. Unlike many smart home hubs and connected 
+IoT devices on the market, your data is not stored or processed in the cloud. It stays in your home on the gateway. 
+The gateway can often bypass the need for you to purchase an IoT hub for each brand. And instead of downloading a 
+different app for each brand, you can manage everything from one place, using any web browser.
 
 This guide will explain how to set up your gateway, connect smart home devices, create rules to automate 
 your home, experiment with voice and text-based commands, and a few additional tips.
@@ -23,7 +24,7 @@ Z-wave radios that connect to the RPi over USB. To run the gateway software on o
 changes in installation and initial setup, most of this guide is agnostic to the actual gateway hardware. 
 
 The following image shows a typical collection of smart home devices, the top row shows the Raspberry Pi, power supply 
-and a Zigbee USB dongle. The bottom row shows a door sensor, smart plug, smart bulb, and motion sensor.
+and a Zigbee USB dongle. The bottom row shows a door sensor, smart plugs, smart bulb, and motion sensor.
 
 <img src="/images/image53.png" alt="smart home devices" width="400">
 
@@ -31,7 +32,7 @@ and a Zigbee USB dongle. The bottom row shows a door sensor, smart plug, smart b
 
 First download the Things Gateway image from [here](https://iot.mozilla.org/gateway/). We recommend using 
 the [etcher.io](https://www.balena.io/etcher/) program to flash the 
-image onto the microSD card (8GB or larger) that is inserted into your computer. Alternatively, some 
+image onto a microSD card (8GB or larger) that is inserted into your computer. Alternatively, some 
 [distributors](https://docs.iot-bus.com/en/latest/getting-started/iot-bus-getting-started-with-mozilla.html) 
 sell the Raspberry Pi with a microSD card that has been pre-flashed with the Mozilla Things 
 Gateway image. Once flashed, insert the microSD card into the Raspberry Pi.
@@ -75,16 +76,18 @@ You can change the Wi-Fi network that the gateway is connected to by powering it
 previous network is not accessbile. It will revert to broadcasting the `Mozilla IoT Gateway` network name, and you 
 can repeat the above steps. You can provision the gateway for as many different Wi-Fi networks as you want.
 
-**TIP**: If you don’t see the welcome screen after cnnnecting to `Mozilla IoT Gateway`, you can try 
-typing http://192.168.220.1 
-into your web browser’s address bar to navigate to the page.
+**TIP**: If you are cnnnected to `Mozilla IoT Gateway` but you don’t see the welcome screen, you can try 
+typing http://192.168.220.1 into your web browser’s address bar to manually navigate to the page. If the page 
+still does not load, then you are not connected to the gateway. Check your Wi-Fi network and try again.
 
 ### Choose Your Own Unique Web Address
 
-Your Mozilla Things Gateway should now be connected to your home network. The next step is to give your gateway its 
-own unique domain name and to create a user account to secure access to it. Your smart home data are stored locally 
-on your gateway, not in the cloud. Only you can access your gateway to control your smart home devices safely and 
-and securely, whether at home or remote.
+Your Mozilla Things Gateway should now be connected to your home network. To proceed, your computer will need 
+to be connected to the same network. 
+
+The next step is to give your gateway its own unique domain name and to create a user account to secure access 
+to it. Your smart home data are stored locally on your gateway, not in the cloud. Only you can access your 
+gateway to control your smart home devices safely and securely, whether at home or remote.
 
 Type `http://gateway.local` into your web browser’s address bar to find your gateway on your home network. 
 
@@ -95,11 +98,7 @@ If a web page does not load, you can type the IP address of the gateway instead.
 <img src="/images/image25.png" alt="gateway IP address" width="600">
 
 You can determine the gateway IP address by pinging the hostname gateway.local from the command line terminal 
-of your computer.
-
-For example: `$ ping gateway.local` or if using Windows 10: `$ ping -4 gateway.local`
-
-To open a terminal window using Microsoft Windows, type `cmd` into the search bar.
+of your computer. To open a terminal window using Microsoft Windows, type `cmd` into the search bar.
 
 <img src="/images/image38.png" alt="windows cmd" width="600">
 
@@ -107,10 +106,14 @@ To open a terminal window using MacOS, type `terminal` into the search bar.
 
 <img src="/images/image39.png" alt="macos terminal" width="300">
 
-**TIP**: If `http://gateway.local` or `http://<IP_address>` can’t be found, check to make sure your laptop is connected to 
-the same home Wi-Fi network that you selected in the previous section. To make sure the gateway is connected, you can log 
-into your home Wi-Fi router to look up the gateway IP address. Look at the router's DHCP client list and search for 
-the name `gateway` or look for a MAC address starting with `b8:27:eb...`.
+From the command line terminal, type: `ping gateway.local` and look for the IP address in the response.
+
+If using Windows 10, type: `ping -4 gateway.local`
+
+**TIP**: If `http://gateway.local` or `http://<IP_address>` can’t be loaded in your browser, check to make sure 
+your laptop is connected to the same home Wi-Fi network that you selected in the previous section. To make sure 
+the gateway is connected, you can log into your home Wi-Fi router to look up the gateway IP address. Look at the 
+router's DHCP client list and search for the name `gateway` or look for a MAC address starting with `b8:27:eb...`.
 
 <img src="/images/image55.png" alt="router DHCP client list" width="600">
 
@@ -123,7 +126,7 @@ Things Gateway over the Internet. Type your chosen name, enter your preferred em
 
 If you previously set up a Things Gateway subdomain, you can reclaim it by entering the same name and email. After this
 step successfully completes, you will receive an email asking you to confirm your address. Doing so will allow you 
-to "own" and continually renew this subdomain (automatically registered for you with LetsEncrupt), for as long as you want.
+to "own" and continually renew this subdomain (automatically registered for you with LetsEncrypt), for as long as you want.
 
 ### Create Your Own Unique User Account
 
@@ -146,13 +149,13 @@ On Android phones/tablets:
 * In Firefox: Select the “add to home” icon in the address bar (circled in red) to add an app icon to your home screen. 
 * In Chrome: Select “Add Things to Home screen”. 
 
-<img src="/images/image3.png" alt="firefox add to home" width="400"><img src="/images/image23.png" alt="firefox as web app" width="400">
+<img src="/images/image3.png" alt="firefox add to home" width="300"><img src="/images/image23.png" alt="firefox as web app" width="300">
 
 On iPhones and iPads: 
 * In Safari: Select the Share icon, and then “Add to Home Screen”. 
 * (Note that iOS does not currently support an "add to home screen" function for Firefox or Chrome browsers.)
 
-<img src="/images/image35.png" alt="safari share" width="400"><img src="/images/image37.png" alt="safari add to home" width="400">
+<img src="/images/image35.png" alt="safari share" width="300"><img src="/images/image37.png" alt="safari add to home" width="300">
 
 ## III. Adding and Managing Smart Home Devices
 
@@ -165,7 +168,7 @@ Pick a device to add and prepare it for pairing. Typical preparation steps for Z
 * Battery-operated devices such as door/window sensors, motion detectors, pushbuttons, dimmer switches, leak detectors, 
 temperature sensors, and more: remove tab from battery, or plug in battery, to power on
 
-<img src="/images/image6.jpg" alt="sensor battery tab" width="200">
+<img src="/images/image6.jpg" alt="sensor battery tab" width="250">
 
 **TIP**: Some devices come pre-paired with controllers or IoT hubs. First follow the manufacturers instructions to do 
 a **factory reset** on those devices before attempting to pair them with your Mozilla gateway. See the Appendix 
@@ -199,11 +202,11 @@ you can learn to create rules to automate interactions between devices.
 
 Devices are displayed on the Things screen and the Floorplan screen. You can toggle light bulb and smart plugs 
 on and off by directly clicking on the device icon. You can also see the current state of devices such as 
-door sensors and motion detectors, from the main screens. 
+door sensors and motion detectors, from these screens. 
 
 <img src="/images/image17.png" alt="things screen" width="800">
 
-To view and control additional details, click the tiny <img src="/images/image18.png" alt="bubble" width="20"> icon 
+To view and control additional details, click the <img src="/images/image18.png" alt="bubble" width="20"> icon 
 toward the top-right of a device icon. A detailed thing page should open. 
 
 <img src="/images/image32.png" alt="detailed things screen" width="800">
@@ -221,12 +224,11 @@ your home for your convenience by creating ‘Rules’. Practice creating a rule
 ### Create a Rule
 
 Navigate to the “Rules” page from the main menu. Click the <img src="/images/image10.png" alt="plus" width="20"> icon 
-in the lower right corner to create a new rule.
+in the lower right corner to create a new rule. In Rule creation, the basic logic is: if (A), then (B). Optionally, 
+you can change “if” to “while” and combine multiple inputs for (A), and take action against multiple outputs for (B). 
 
 <img src="/images/image29.png" alt="new rule" width="800">
 
-In Rule creation, the basic logic is: if (A), then (B). Optionally, you can change “if” to “while” and combine 
-multiple inputs for (A), and take action against multiple outputs for (B). 
 Let’s start by grabbing our input: time. Drag the ‘clock’ from the bottom of the screen to the left side of the Rule space. 
 Since we want something to occur at 10pm, set the time to ‘10pm’.
 
@@ -263,12 +265,12 @@ From the main Rules view, each rule is represented by a rectangle.
 * Disable/Enable. You can disable a rule by toggling the "switch" element to the left, which will turn the circle color 
 to grey. You can re-enable the rule by toggling the switch element back to the right, turning the circle back to white.
 
-<img src="/images/image13.png" alt="enable or disable rule" width="600">
+<img src="/images/image13.png" alt="enable or disable rule" width="300">
 
 * Remove. To remove (permanently delete) a rule, hover over the rule rectangle and click on the "(x)" in the upper 
 right-hand corner.
 
-<img src="/images/image41.png" alt="remove rule" width="600">
+<img src="/images/image41.png" alt="remove rule" width="800">
 
 ## V. Floorplan: Map the Location of Your Devices
 
@@ -283,7 +285,7 @@ First sketch a floorplan of your home, and save it as a digital image. You can d
 or use an illustrator tool. (If you take a picture of the floorplan using your smartphone, you can upload the image 
 directly to your gateway from the phone's browser.)
 
-<img src="/images/image36.png" alt="sketched floorplan" width="600">
+<img src="/images/image36.jpg" alt="sketched floorplan" width="600">
 
 **TIP**: Save your digital drawing as an SVG file with white lines and a transparent background, using a tool like Inkscape or Sketch, for a minimalist look.
 
@@ -416,7 +418,7 @@ to change the pi user's password.
 
 Click "View Logs" to see raw logs displayed in your browser.
 
-<img src="/images/image50.png" alt="completed rule" width="200">
+<img src="/images/image50.png" alt="view logs" width="200">
 
 Click "Create local authorization" to establish a secure web token that can be exchanged with 3rd party 
 applications and services that you may want to enable, or simply for accessing the data using your own 
