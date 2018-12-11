@@ -4,7 +4,6 @@ Smart Home Gateway v0.6 User Guide
 .. figure:: /images/ThingsGateway-Mozilla.png
    :alt: Project Things by Mozilla
 
-   Project Things by Mozilla
 I. Introduction
 ---------------
 
@@ -42,6 +41,10 @@ the top row shows the Raspberry Pi, power supply and a Zigbee USB
 dongle. The bottom row shows a door sensor, smart plugs, smart bulb, and
 motion sensor.
 
+.. image:: /images/image53.png
+   :width: 400 px
+   :alt: smart home devices
+
 Flashing the microSD Card
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -54,6 +57,10 @@ Alternatively, some
 sell the Raspberry Pi with a microSD card that has been pre-flashed with
 the Mozilla Things Gateway image. Once flashed, insert the microSD card
 into the Raspberry Pi.
+
+.. image:: /images/image54.png
+   :width: 160 px
+   :alt: uSD card
 
 II. First Time Setup
 --------------------
