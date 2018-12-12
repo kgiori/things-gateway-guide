@@ -42,7 +42,7 @@ dongle. The bottom row shows a door sensor, smart plugs, smart bulb, and
 motion sensor.
 
 .. image:: /images/image53.png
-   :width: 400 px
+   :width: 400px
    :alt: smart home devices
 
 Flashing the microSD Card
@@ -59,7 +59,7 @@ the Mozilla Things Gateway image. Once flashed, insert the microSD card
 into the Raspberry Pi.
 
 .. image:: /images/image54.png
-   :width: 160 px
+   :width: 160px
    :alt: uSD card
 
 II. First Time Setup
@@ -77,6 +77,9 @@ four USB ports. The additional USB dongles allow the gateway to
 communicate with devices that don’t use Wi-Fi, Bluetooth, or other IP
 networking protocols.
 
+.. image:: /images/image1.png
+   :alt: power on gateway
+   
 Plug the gateway into a power outlet using at least a 2A USB power
 supply. (Cell phone charging USB power adapters will not provide
 sufficient power to run a Raspberry Pi gateway.) After applying power,
@@ -90,6 +93,9 @@ Connect to Wi-Fi
 Using your laptop, connect to the Wi-Fi network called
 ``Mozilla IoT Gateway``.
 
+.. image:: /images/image8.png
+   :alt: Mozilla IoT Gateway SSID
+
 (Note that it takes several minutes after first time power on before the
 network name will appear in the scanned list of Wi-Fi networks.)
 
@@ -101,6 +107,9 @@ your home network. Alternatively, you can directly connect the gateway
 using an ethernet cable to your local area network (LAN), for example by
 plugging into a LAN port of your home Wi-Fi router.
 
+.. image:: /images/image19.png
+   :alt: SSID list
+   
 You can change the Wi-Fi network that the gateway is connected to by
 powering it up in a new location, where the previous network is not
 accessbile. It will revert to broadcasting the ``Mozilla IoT Gateway``
@@ -129,17 +138,29 @@ whether at home or remote.
 Type ``http://gateway.local`` into your web browser’s address bar to
 find your gateway on your home network.
 
+.. image:: /images/image9.png
+   :alt: gateway.local
+
 If a web page does not load, you can type the IP address of the gateway
 instead.
+
+.. image:: /images/image25.png
+   :alt: gateway.local IP address
 
 You can determine the gateway IP address by pinging the hostname
 gateway.local from the command line terminal of your computer. To open a
 terminal window using Microsoft Windows, type ``cmd`` into the search
 bar.
 
+.. image:: /images/image38.png
+   :alt: windows cmd
+
 To open a terminal window using MacOS, type ``terminal`` into the search
 bar.
 
+.. image:: /images/image39.png
+   :alt: macOS terminal
+   
 From the command line terminal, type: ``ping gateway.local`` and look
 for the IP address in the response.
 
@@ -153,8 +174,14 @@ router to look up the gateway IP address. Look at the router's DHCP
 client list and search for the name ``gateway`` or look for a MAC
 address starting with ``b8:27:eb...``.
 
+.. image:: /images/image55.png
+   :alt: router DHCP client list
+
 Once you have successfully connected to the gateway in your browser, a
 Welcome page will load.
+
+.. image:: /images/image22.png
+   :alt: create subdomain
 
 At this step you need to think of a unique web address name that will
 hereafter be used to securely access your Things Gateway over the
@@ -177,6 +204,9 @@ devices from any web browser, anywhere in the world. (Additional user
 accounts can be added later. See ``Settings => Users``, and follow a
 similar account creation process.)
 
+.. image:: /images/image5.png
+   :alt: create user account
+
 Bookmark Your Success!
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -195,9 +225,21 @@ On Android phones/tablets: \* In Firefox: Select the “add to home” icon
 in the address bar (circled in red) to add an app icon to your home
 screen. \* In Chrome: Select “Add Things to Home screen”.
 
+.. image:: /images/image3.png
+   :alt: firefox add to home
+   
+.. image:: /images/image23.png
+   :alt: firefox as web app
+
 On iPhones and iPads: \* In Safari: Select the Share icon, and then “Add
 to Home Screen”. \* (Note that iOS does not currently support an "add to
 home screen" function for Firefox or Chrome browsers.)
+
+.. image:: /images/image35.png
+   :alt: safari share
+   
+.. image:: /images/image37.png
+   :alt: safari add to home
 
 III. Adding and Managing Smart Home Devices
 -------------------------------------------
@@ -206,13 +248,17 @@ Scan For and Add Smart Devices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pick a device to add and prepare it for pairing. Typical preparation
-steps for Zigbee and Z-Wave devices are as follows: \* Smart bulb: screw
-into a light fixture that it is turned on (bulb should be lit when ready
-for pairing) \* Smart plug: plug into an outlet \* Other powered
-devices: plug in and turn on \* Battery-operated devices such as
-door/window sensors, motion detectors, pushbuttons, dimmer switches,
-leak detectors, temperature sensors, and more: remove tab from battery,
-or plug in battery, to power on
+steps for Zigbee and Z-Wave devices are as follows: 
+* Smart bulb: screw into a light fixture that it is turned on (bulb 
+should be lit when ready for pairing) 
+* Smart plug: plug into an outlet 
+* Other powered devices: plug in and turn on 
+* Battery-operated devices such as door/window sensors, motion detectors, 
+pushbuttons, dimmer switches, leak detectors, temperature sensors, and 
+more: remove tab from battery, or plug in battery, to power on
+
+.. image:: /images/image6.jpg
+   :alt: sensor battery tab
 
 **TIP**: Some devices come pre-paired with controllers or IoT hubs.
 First follow the manufacturers instructions to do a **factory reset** on
@@ -224,13 +270,20 @@ that you provision devices one at a time. First load your secure web
 address (format [your\_subdomain].mozilla-iot.org) and log in to your
 account.
 
-From the main “Things” page, select the button at the bottom right
-corner. The gateway will begin scanning to discover unprovisioned and
-unconfigured devices that are nearby.
+From the main “Things” page, select the 
+.. image:: /images/image10.png :alt: plus
+button at the bottom right corner. The gateway will begin scanning to 
+discover unprovisioned and unconfigured devices that are nearby.
+
+.. image:: /images/image33.png
+   :alt: scan things
 
 When a new device is found, it will appear on the Things scan page.
 Rename the device, then select ‘Save’ to add it, and ‘Done’ when you are
 finished.
+
+.. image:: /images/image2.png
+   :alt: save things
 
 **TIP**: When naming your smart devices, we recommend using a name that
 helps you remember where they are located in your home. For example,
@@ -252,11 +305,20 @@ can toggle light bulb and smart plugs on and off by directly clicking on
 the device icon. You can also see the current state of devices such as
 door sensors and motion detectors, from these screens.
 
+.. image:: /images/image17.png
+   :alt: things screen
+
 To view and control additional details, click the icon toward the
 top-right of a device icon. A detailed thing page should open.
 
+.. image:: /images/image32.png
+   :alt: detailed things screen
+
 To edit a device’s name or remove it altogether, select the icon in the
 bottom right-hand corner.
+
+.. image:: /images/image26.png
+   :alt: edit menu
 
 IV. Rules: Automate Your Home
 -----------------------------
@@ -269,18 +331,28 @@ steps.
 Create a Rule
 ~~~~~~~~~~~~~
 
-Navigate to the “Rules” page from the main menu. Click the icon in the
-lower right corner to create a new rule. In Rule creation, the basic
+Navigate to the “Rules” page from the main menu. Click the 
+.. image:: /images/image10.png :alt: plus icon 
+in the lower right corner to create a new rule. In Rule creation, the basic
 logic is: if (A), then (B). Optionally, you can change “if” to “while”
 and combine multiple inputs for (A), and take action against multiple
 outputs for (B).
+
+.. image:: /images/image29.png
+   :alt: new rule
 
 Let’s start by grabbing our input: time. Drag the ‘clock’ from the
 bottom of the screen to the left side of the Rule space. Since we want
 something to occur at 10pm, set the time to ‘10pm’.
 
+.. image:: /images/image21.png
+   :alt: cloack as input
+
 Next we select our output: a smart bulb named "Bedroom Light". Drag the
 light you want to turn off at 10pm to the right side of the Rule space.
+
+.. image:: /images/image27.png
+   :alt: light action
 
 To complete the rule, select the desired property of the smart light
 that you want to set at 10pm. In this example, we want the bedroom light
@@ -288,6 +360,9 @@ to turn “Off” at 10pm. Go to the light's drop down menu and select
 ‘Off’. The clock and light bulb rectangles should now be connected by a
 black line, and the “If” statement under your Rule name should be
 updated to reflect the logic of this rule.
+
+.. image:: /images/image20.png
+   :alt: completed rule
 
 In the top left hand corner, click the tiny pencil near "Rule Name" to
 edit the name of your rule. For example, you can name this rule “At
@@ -305,17 +380,26 @@ overview page.
 View/Edit, Disable/Enable, or Remove a Rule
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From the main Rules view, each rule is represented by a rectangle. \*
-View/Edit. You can view or change a rule by hovering over the middle of
-the rectangle and selecting the "Edit" button.
+From the main Rules view, each rule is represented by a rectangle. 
 
--  Disable/Enable. You can disable a rule by toggling the "switch"
+*  View/Edit. You can view or change a rule by hovering over the middle of the rectangle and selecting the "Edit" button.
+
+.. image:: /images/image40.png
+   :alt: rule mouse over
+
+*  Disable/Enable. You can disable a rule by toggling the "switch"
    element to the left, which will turn the circle color to grey. You
    can re-enable the rule by toggling the switch element back to the
    right, turning the circle back to white.
+   
+.. image:: /images/image13.png
+   :alt: enable/disable rule
 
--  Remove. To remove (permanently delete) a rule, hover over the rule
+*  Remove. To remove (permanently delete) a rule, hover over the rule
    rectangle and click on the "(x)" in the upper right-hand corner.
+   
+.. image:: /images/image41.png
+   :alt: remove rule
 
 V. Floorplan: Map the Location of Your Devices
 ----------------------------------------------
@@ -336,20 +420,34 @@ You can draw one by hand and take a picture of it, or use an illustrator
 tool. (If you take a picture of the floorplan using your smartphone, you
 can upload the image directly to your gateway from the phone's browser.)
 
+.. image:: /images/image36.jpg
+   :alt: sketched floorplan
+
 **TIP**: Save your digital drawing as an SVG file with white lines and a
 transparent background, using a tool like Inkscape or Sketch, for a
 minimalist look.
 
+.. image:: /images/image14.png
+   :alt: svg floorplan
+
 Upload Floorplan
 ~~~~~~~~~~~~~~~~
 
-Click on the pencil icon in the lower right corner of the floorplan page
+Click on the 
+.. image:: /images/image11.png :alt: sketched floorplan 
+pencil icon in the lower right corner of the floorplan page
 to enter edit mode. An "upload file" button will appear -- click on it
 to select the floorplan image to be uploaded.
+
+.. image:: /images/image7.png
+   :alt: upload floorplan
 
 After the floorplan image is uploaded, make sure you are still in edit
 mode, and then drag the thing icons from the top of the page onto the
 floorplan. Click the check mark in the lower right corner when done.
+
+.. image:: /images/image30.png
+   :alt: position things on floorplan
 
 VI. Add-Ons: Extend your Gateway’s Capabilities
 -----------------------------------------------
@@ -366,11 +464,17 @@ Locate and Install More Add-Ons As Needed
 
 From the Settings menu, select Add-Ons.
 
+.. image:: /images/image12.png
+   :alt: addons
+
 To enable more Add-Ons, click the "(+)" button in the lower right to
 browse the add-on list, then select ``+ Add`` to enable any additional
 add-ons. For example, if you have TP-Link or HomeKit compatible devices
 at home, you can install their add-ons, then discover and pair the
 devices so that they can be managed by your Mozilla gateway.
+
+.. image:: /images/image24.png
+   :alt: select addon
 
 New add-ons will continue to be developed to enable control of newly
 supported devices, so check back periodically to scan new Add-ons in the
@@ -390,6 +494,9 @@ Enable Smart Assistant
 From the Settings menu, select Experiments, and then check the box to
 enable the Smart Assistant.
 
+.. image:: /images/image31.png
+   :alt: enable experiments
+
 Using the Smart Assistant
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -397,6 +504,9 @@ Once enabled, the smart assistant page can be selected from the main
 navigation menu. It lets you use voice and messaging commands to control
 the things in your home. The same commands are possible whether using
 voice or typing text input.
+
+.. image:: /images/image4.png
+   :alt: smart assistant
 
 The web interface shows both typed and spoken commands that were made
 recently, as well as the result of the command. If a portion of a
@@ -425,11 +535,17 @@ VIII. Additional Settings
 Browse the other pages listed under the Settings menu in order to find
 additional configuration and capabilities of the Things Gateway.
 
+.. image:: /images/image43.png
+   :alt: settings menu
+
 Domain
 ~~~~~~
 
 The default localhost name is gateway.local, but you can change it to
 match your subdomain or choose a different name.
+
+.. image:: /images/image42.png
+   :alt: localhost name
 
 Users
 ~~~~~
@@ -439,14 +555,23 @@ their own unique login. Although all users have the same access and
 control privileges in gateway v0.6, a future feature will be to allow
 lesser privileges to some users, such as children or guests.
 
+.. image:: /images/image45.png
+   :alt: user accounts
+
 Click the "(+)" icon to provision more user accounts.
 
+.. image:: /images/image46.png
+   :alt: add users
+   
 Adapters
 ~~~~~~~~
 
 The adapters page shows which of the Add-ons are currently installed and
 active. Go to the Add-ons page to add or remove adapters that are shown
 on this page.
+
+.. image:: /images/image44.png
+   :alt: adapters
 
 Updates
 ~~~~~~~
@@ -455,12 +580,18 @@ Assuming your gateway is connected to the Internet, system updates will
 be applied automatically when a new stable release is ready. As of the
 v0.6 release, new versions are being released approximately quarterly.
 
+.. image:: /images/image47.png
+   :alt: updates
+
 Authorizations
 ~~~~~~~~~~~~~~
 
 Authorizations are enabled in "Settings" by selecting "Developer =>
 Create local authorization". This page shows whether or not an
 authorization has been enabled.
+
+.. image:: /images/image48.png
+   :alt: authorizations
 
 Developer
 ~~~~~~~~~
@@ -472,12 +603,21 @@ you immediately ssh into the RPi to change the default password. Type
 the command ``$ passwd`` and follow the prompts to change the pi user's
 password.
 
+.. image:: /images/image49.png
+   :alt: developer menu
+   
 Click "View Logs" to see raw logs displayed in your browser.
+
+.. image:: /images/image50.png
+   :alt: view logs
 
 Click "Create local authorization" to establish a secure web token that
 can be exchanged with 3rd party applications and services that you may
 want to enable, or simply for accessing the data using your own
 development tools.
+
+.. image:: /images/image51.png
+   :alt: create local auth
 
 IX. Support
 -----------
