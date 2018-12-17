@@ -222,6 +222,7 @@ Gateway as a **web application on the home screen** of your phones and
 tablets.
 
 On Android phones/tablets: 
+
 * In Firefox: Select the “add to home” icon in the address bar (circled in red) to add an app icon to your home screen. 
 * In Chrome: Select “Add Things to Home screen”.
 
@@ -232,6 +233,7 @@ On Android phones/tablets:
    :alt: firefox as web app
 
 On iPhones and iPads: 
+
 * In Safari: Select the Share icon, and then “Add to Home Screen”. 
 * (Note that iOS does not currently support an "add to home screen" function for Firefox or Chrome browsers.)
 
@@ -249,6 +251,7 @@ Scan For and Add Smart Devices
 
 Pick a device to add and prepare it for pairing. Typical preparation
 steps for Zigbee and Z-Wave devices are as follows: 
+
 * Smart bulb: screw into a light fixture that it is turned on (bulb 
 should be lit when ready for pairing) 
 * Smart plug: plug into an outlet 
@@ -270,10 +273,11 @@ that you provision devices one at a time. First load your secure web
 address (format [your\_subdomain].mozilla-iot.org) and log in to your
 account.
 
-From the main “Things” page, select the 
-.. image:: /images/image10.png :alt: plus
-button at the bottom right corner. The gateway will begin scanning to 
+From the main “Things” page, select the |plus| button at the bottom 
+right corner. The gateway will begin scanning to 
 discover unprovisioned and unconfigured devices that are nearby.
+
+.. |plus| image:: /images/image10.png :alt: plus
 
 .. image:: /images/image33.png
    :alt: scan things
@@ -331,12 +335,13 @@ steps.
 Create a Rule
 ~~~~~~~~~~~~~
 
-Navigate to the “Rules” page from the main menu. Click the 
-.. image:: /images/image10.png :alt: plus icon 
+Navigate to the “Rules” page from the main menu. Click the |plus| icon 
 in the lower right corner to create a new rule. In Rule creation, the basic
 logic is: if (A), then (B). Optionally, you can change “if” to “while”
 and combine multiple inputs for (A), and take action against multiple
 outputs for (B).
+
+.. |plus| image:: /images/image10.png :alt: plus
 
 .. image:: /images/image29.png
    :alt: new rule
@@ -433,11 +438,11 @@ minimalist look.
 Upload Floorplan
 ~~~~~~~~~~~~~~~~
 
-Click on the 
-.. image:: /images/image11.png :alt: sketched floorplan 
-pencil icon in the lower right corner of the floorplan page
+Click on the |pencil| icon in the lower right corner of the floorplan page
 to enter edit mode. An "upload file" button will appear -- click on it
 to select the floorplan image to be uploaded.
+
+.. |pencil| image:: /images/image11.png :alt: pencil
 
 .. image:: /images/image7.png
    :alt: upload floorplan
@@ -600,7 +605,7 @@ On the "Developer" page you can enable ssh, for connecting directly to
 the Raspberry Pi console. The default username is "pi", and the default
 password is "raspberry". If you decide to enable ssh, we recommend that
 you immediately ssh into the RPi to change the default password. Type
-the command ``$ passwd`` and follow the prompts to change the pi user's
+the command ``passwd`` and follow the prompts to change the pi user's
 password.
 
 .. image:: /images/image49.png
