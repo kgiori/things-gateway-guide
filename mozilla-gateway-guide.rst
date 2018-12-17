@@ -221,9 +221,9 @@ you have access to from home. It is also handy to save your Things
 Gateway as a **web application on the home screen** of your phones and
 tablets.
 
-On Android phones/tablets: \* In Firefox: Select the “add to home” icon
-in the address bar (circled in red) to add an app icon to your home
-screen. \* In Chrome: Select “Add Things to Home screen”.
+On Android phones/tablets: 
+* In Firefox: Select the “add to home” icon in the address bar (circled in red) to add an app icon to your home screen. 
+* In Chrome: Select “Add Things to Home screen”.
 
 .. image:: /images/image3.png
    :alt: firefox add to home
@@ -231,9 +231,9 @@ screen. \* In Chrome: Select “Add Things to Home screen”.
 .. image:: /images/image23.png
    :alt: firefox as web app
 
-On iPhones and iPads: \* In Safari: Select the Share icon, and then “Add
-to Home Screen”. \* (Note that iOS does not currently support an "add to
-home screen" function for Firefox or Chrome browsers.)
+On iPhones and iPads: 
+* In Safari: Select the Share icon, and then “Add to Home Screen”. 
+* (Note that iOS does not currently support an "add to home screen" function for Firefox or Chrome browsers.)
 
 .. image:: /images/image35.png
    :alt: safari share
