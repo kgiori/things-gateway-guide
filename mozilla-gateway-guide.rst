@@ -252,13 +252,10 @@ Scan For and Add Smart Devices
 Pick a device to add and prepare it for pairing. Typical preparation
 steps for Zigbee and Z-Wave devices are as follows: 
 
-* Smart bulb: screw into a light fixture that it is turned on (bulb 
-should be lit when ready for pairing) 
+* Smart bulb: screw into a light fixture that it is turned on (bulb should be lit when ready for pairing) 
 * Smart plug: plug into an outlet 
 * Other powered devices: plug in and turn on 
-* Battery-operated devices such as door/window sensors, motion detectors, 
-pushbuttons, dimmer switches, leak detectors, temperature sensors, and 
-more: remove tab from battery, or plug in battery, to power on
+* Battery-operated devices such as door/window sensors, motion detectors, pushbuttons, dimmer switches, leak detectors, temperature sensors, and more: remove tab from battery, or plug in battery, to power on
 
 .. image:: /images/image6.jpg
    :alt: sensor battery tab
