@@ -27,17 +27,43 @@ can repeat the above steps. You can provision the gateway for as many different 
 ## Edit Wi-Fi Configuration File Directly
 
 You can alternatively edit the Wi-Fi configuration file directly. For example:
-`sudo vi /etc/wpa_sppulicant/wpa_supplicant.conf`
+`sudo vi /etc/wpa_supplicant/wpa_supplicant.conf`
+
+You might edit it to look something like the following (you can add multiple networks):
+
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=US
+
+network={
+        ssid="TechConference"
+        Key_mgmt=NONE
+}
+
+network={
+        ssid="mozilla-things"
+        psk="some-password”
+}
+```
 
 ### Ways to connect to the RPi:
 
-1. Connect a special USB to TTL serial cable to three GPIO pins to gain direct console access.
-2. Enable ssh by dropping a blank file named "ssh" onto the uSD card.
-  1. Connect the Ethernet port to a local network and connect your laptop to that same network, then 
-     look up its IP address or try "ping gateway.local" (Linux/MacOS) or "ping -4 gateway.local" (MS Windows 10).
-  2. Connect to the RPi as an access point at "Mozilla IoT Gateway"
-3. Using serial, you will be prompted at the login "pi:" after the boor process completes. 
-   Default password is `raspberry`. Be sure to change it with the `passwd` command right away.
-4. Using ssh, login as the pi user. For example: `ssh pi@192.168.1.xyz`. Same password and warning to change as above.
+Wired serial connection between RPi and Laptop USB.
+1. Connect a special USB to TTL serial cable to three GPIO pins to gain direct console access. From your 
+   laptop terminal window use the screen command. 
+   `screen /dev/cu.SLAB_USBtoUART 115200`
+2. After the RPi boots, you will see a `login:` prompt. Enter `pi` as the user. The 
+   default password is `raspberry`. Be sure to change it with the `passwd` command right away.
+   
+Connect over an IP network using ssh.
+1. Enable ssh by dropping a blank file named "ssh" onto the uSD card.
+2. Connect the Ethernet port to a local network and connect your laptop to that same network, then 
+   look up its IP address or try "ping gateway.local" (Linux/MacOS) or "ping -4 gateway.local" (MS Windows 10).
+3. Using ssh, log in as the pi user. For example: `ssh pi@192.168.1.xyz`.
+4. If obtaining an IP address over Ethernet is not available, connect your laptop to the RPi directly 
+   as an access point (to "Mozilla IoT Gateway") then `ssh pi@192.168.220.1`
+5. Same default `raspberry` password and warning to change it immediately as noted above.
+
 
 
