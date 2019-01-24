@@ -76,7 +76,7 @@ You can change the Wi-Fi network that the gateway is connected to by powering it
 previous network is not accessbile. It will revert to broadcasting the `Mozilla IoT Gateway` network name, and you 
 can repeat the above steps. You can provision the gateway for as many different Wi-Fi networks as you want.
 
-**TIP**: If you are cnnnected to `Mozilla IoT Gateway` but you don’t see the welcome screen, you can try 
+**TIP**: If you are connected to `Mozilla IoT Gateway` but you don’t see the welcome screen, you can try 
 typing http://192.168.220.1 into your web browser’s address bar to manually navigate to the page. If the page 
 still does not load, then you are not connected to the gateway. Check your Wi-Fi network and try again.
 
