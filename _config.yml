@@ -1,1 +1,4 @@
 theme: jekyll-theme-slate
+title: Mozilla WebThings Documentation
+description: A guide to using the WebThings Gateway and WebThings Framework
+show_downloads: false
