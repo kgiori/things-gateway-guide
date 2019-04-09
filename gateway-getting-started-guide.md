@@ -75,16 +75,16 @@ Enter your choice of subdomain and an email address in case you need to retrieve
  * If neither http://gateway.local or http://<IP_address> will load in your browser, check to make sure your computer is definitely connected to the same Wi-Fi network you connected the gateway to.
  * If you have previously registered a subdomain you want to re-use, enter the subdomain and the email address you used to register it and follow the on-screen instructions to re-claim it.
  
- ### 6. Create User Account
- Once you have registered your subdomain you should be automatically redirected to the next step of the setup process, which is to create your first user account on the gateway. Enter your name, email address and a password then click "Next".
+### 6. Create User Account
+Once you have registered your subdomain you should be automatically redirected to the next step of the setup process, which is to create your first user account on the gateway. Enter your name, email address and a password then click "Next".
  
- ![Create user account](/images/create_user_account.png)
+![Create user account](/images/create_user_account.png)
  
- ***Note:*** You can create additional user accounts later.
+***Note:*** You can create additional user accounts later.
  
- ### Success!
- You should then be redirected to an empty "Things" screen of the gateway where you can start to add devices.
+### Success!
+You should then be redirected to an empty "Things" screen of the gateway where you can start to add devices.
  
- ![Things screen](/images/things_screen.png)
+![Things screen](/images/things_screen.png)
  
- See the [WebThings Gateway User Guide](./gateway-user-guide.md) to learn how to use your gateway.
+See the [WebThings Gateway User Guide](./gateway-user-guide.md) to learn how to use your gateway.
