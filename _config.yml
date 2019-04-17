@@ -1,6 +1,7 @@
 theme: jekyll-theme-slate
 title: Mozilla WebThings Documentation
 description: A guide to using the WebThings Gateway and WebThings Framework
+baseurl: /docs
 show_downloads: false
 encoding: UTF-8
 markdown: kramdown
