@@ -2,3 +2,18 @@ theme: jekyll-theme-slate
 title: Mozilla WebThings Documentation
 description: A guide to using the WebThings Gateway and WebThings Framework
 show_downloads: false
+encoding: UTF-8
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax
+  syntax_highlighter: rouge
+future: true
+jailed: false
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
