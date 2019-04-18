@@ -28,5 +28,4 @@ It is an open source implementation of emerging [Web of Things](https://www.w3.o
  
 ## Web Thing API
  * 🌐 [Web Thing API specification](https://iot.mozilla.org/wot/)
- * 📝 [Using the Web Thing API](./web-thing-api.md)
 
