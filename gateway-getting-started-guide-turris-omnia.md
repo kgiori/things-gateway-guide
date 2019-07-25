@@ -14,7 +14,7 @@
 2. **A USB stick** (at least 256MB)
 3. **USB dongles** (see the list of [compatible adapters](https://github.com/mozilla-iot/wiki/wiki/Supported-Hardware#adapters))
 
-**Note:** The Turris Omnia comes with Wi-Fi built in. The USB dongles are needed if you want to support other smart home protocols like Bluetooth, Zigbee and Z-Wave.
+**Note:** The Turris Omnia comes with Wi-Fi built in. The USB dongles are needed if you want to support other smart home protocols like Zigbee and Z-Wave.
 
 ### 1. Download Image
 
@@ -61,7 +61,7 @@ Enter your choice of subdomain and an email address in case you need to retrieve
 
 **Notes:**
  * You can choose to skip this step (either to only use the gateway locally on your home network or manually configure DNS yourself), but note that currently if you do skip this step you'll have to re-flash the gateway in order to register a subdomain.
- * If neither http://gateway.local or http://192.168.2.1 will load in your browser, double check your computer is definitely connected to the Wi-Fi network you just created.
+ * If neither http://gateway.local or http://192.168.2.1 will load in your browser, double check your computer is connected to the Wi-Fi network you just created.
  * If you have previously registered a subdomain you want to re-use, enter the subdomain and the email address you used to register it and follow the on-screen instructions to re-claim it.
  
 ### 6. Create User Account
