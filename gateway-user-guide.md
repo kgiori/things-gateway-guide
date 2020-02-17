@@ -222,11 +222,7 @@ New add-ons will continue to be developed to enable control of newly supported d
 to scan new Add-ons in the list. You can submit requests for additional device support in the issues tab of the 
 [gateway software development site](https://github.com/mozilla-iot/gateway/issues).
 
-## VIII. Experiments
-
-You can try out experimental new features by enabling them in Experiments.
-
-## IX. Additional Settings
+## VIII. Additional Settings
 
 Browse the other pages listed under the Settings menu to find additional configuration and capabilities. 
 
@@ -275,13 +271,6 @@ Some add-ons require configuration in order to function (e.g., Pulse, Weather, O
 
 <img src="./images/addon-config-pulse.png" alt="add-on config" width="800">
 
-### Adapters
-
-The Adapters page shows which of the Add-ons are currently installed and active. Go to the Add-ons page to add or remove 
-adapters that are shown on this page.
-
-<img src="./images/image44.png" alt="adapters" width="800">
-
 ### Updates
 
 Assuming your gateway is connected to the Internet, system updates will be applied automatically when a new 
@@ -295,6 +284,10 @@ Authorizations are enabled in "Settings" by selecting "Developer => Create local
 whether or not an authorization has been enabled.
 
 <img src="./images/image48.png" alt="authorizations" width="800">
+
+### Experiments
+
+You can try out experimental new features by enabling them in Experiments.
 
 ### Developer
 
@@ -315,7 +308,7 @@ development tools.
 
 <img src="./images/image51.png" alt="create auth" width="800">
 
-## X. Support
+## IX. Support
 
 For support, please sign up to our IoT Discourse forum (https://discourse.mozilla.org/c/iot) or email iot@mozilla.com 
 or join us on Mozilla IRC #iot channel 
