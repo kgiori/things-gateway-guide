@@ -310,9 +310,7 @@ development tools.
 
 ## IX. Support
 
-For support, please sign up to our IoT Discourse forum (https://discourse.mozilla.org/c/iot) or email iot@mozilla.com 
-or join us on Mozilla IRC #iot channel 
-or post issues on [github](https://github.com/mozilla-iot/gateway/issues). 
+For support, please sign up to our IoT [Discourse forum](https://discourse.mozilla.org/c/iot), email us at iot@mozilla.com, join us on [Matrix](https://chat.mozilla.org) in the #iot channel, or post issues on [GitHub](https://github.com/mozilla-iot/gateway/issues). 
 
 ## Appendix: Tips on Pairing and Unpairing Smart Devices
 
