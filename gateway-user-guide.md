@@ -159,7 +159,14 @@ right-hand corner.
 
 <img src="./images/image41.png" alt="remove rule" width="800">
 
-## V. Floorplan: Map the Location of Your Devices
+## V. Using Logging
+
+The logging page is visible in the main navigation menu. Any devices that can be logged will be visible from
+the configuration screen, accessed by clicking the plus icon in the lower right corner. Select the device you want to log,  the property you want to log, and duration of log data you want to store on your gateway.
+
+<img src="./images/log-temp.png" alt="log temp" width="800">
+
+## VI. Floorplan: Map the Location of Your Devices
 
 The Floorplan allows you to view your devices as they are positioned within your home. It shows all your devices, 
 consistent with what you would see on the Things page, but it lets you see their states mapped over the layput of 
@@ -191,7 +198,7 @@ in the lower right corner when done.
 
 <img src="./images/image30.png" alt="position things on floorplan" width="800">
 
-## VI. Add-Ons: Extend your Gateway’s Capabilities
+## VII. Add-Ons: Extend your Gateway’s Capabilities
 
 The gateway has an add-ons system so that you can extend its capabilities. A few add-ons are installed by default 
 (Web Thing, Zigbee, and Z-Wave) so that your gateway will work with a large number of commercial devices right 
@@ -214,13 +221,6 @@ by your Mozilla gateway.
 New add-ons will continue to be developed to enable control of newly supported devices, so check back periodically 
 to scan new Add-ons in the list. You can submit requests for additional device support in the issues tab of the 
 [gateway software development site](https://github.com/mozilla-iot/gateway/issues).
-
-## VII. Using Logging
-
-The logging page is visible in the main navigation menu. Any devices that can be logged will be visible from
-the configuration screen, accessed by clicking the plus icon in the lower right corner. Select the device you want to log,  the property you want to log, and duration of log data you want to store on your gateway.
-
-<img src="./images/log-temp.png" alt="log temp" width="800">
 
 ## VIII. Experiments
 
@@ -305,7 +305,7 @@ to change the pi user's password.
 
 <img src="./images/image49.png" alt="developer menu" width="800">
 
-Click "View Logs" to see raw logs displayed in your browser.
+Click "View Internal Logs" to see raw logs displayed in your browser.
 
 <img src="./images/image50.png" alt="view logs" width="200">
 
