@@ -215,48 +215,18 @@ New add-ons will continue to be developed to enable control of newly supported d
 to scan new Add-ons in the list. You can submit requests for additional device support in the issues tab of the 
 [gateway software development site](https://github.com/mozilla-iot/gateway/issues).
 
-## VII. Experiments
+## VII. Using Logging
 
-You can try out experimental new features, like the Smart Assistant, and Logging, by enabling them in Experiments.
-
-### Enable Smart Assistant and Logging
-
-From the Settings menu, select Experiments, and then check the boxes to enable the Smart Assistant and Logging. 
-
-<img src="./images/experiments.png" alt="enable experiments" width="800">
-
-### Using the Smart Assistant
-
-Once enabled, the smart assistant page can be selected from the main navigation menu. It lets you use voice and 
-messaging commands to control the things in your home. The same commands are possible whether using voice or 
-typing text input. 
-
-<img src="./images/image4.png" alt="smart assistant" width="800">
-
-The web interface shows both typed and spoken commands that were made recently, as well as the result of the command. 
-If a portion of a command that you spoke was misinterpreted, or just missing, try again. Remember to speak loud and 
-clear near your PC's microphone.
-
-You can give it commands like “Turn the kitchen light on” and it will respond to you to confirm the action. So far it 
-can understand a basic set of commands to turn devices on and off, set levels, set color and set color temperatures.
-
-The first time you click on the microphone icon, your browser will ask for permission to use your computer’s microphone. 
-From the popup dialog, click the “Remember this decision” checkbox, then select “Allow”.
-
-Note that in the 0.8 gateway release, browser-based voice commands are processed using Google's voice assistant API, 
-so the audio strings are processed in the cloud. The speech-to-text result is passed back to your gateway. If you instead 
-type a command into the text field of the smart assistant screen, those commands are processed locally and do not 
-require a connection to the Internet.
-
-### Using Logging
-
-Once enabled, the logging page is visible in the main navigation menu. Any devices that can be logged will be visible from
-the configuration screen, accessed by clicking the plus icon in the lower right corner. Select the device you want to log, 
-the property you want to log, and duration of log data you want to store on your gateway.
+The logging page is visible in the main navigation menu. Any devices that can be logged will be visible from
+the configuration screen, accessed by clicking the plus icon in the lower right corner. Select the device you want to log,  the property you want to log, and duration of log data you want to store on your gateway.
 
 <img src="./images/log-temp.png" alt="log temp" width="800">
 
-## VIII. Additional Settings
+## VIII. Experiments
+
+You can try out experimental new features by enabling them in Experiments.
+
+## IX. Additional Settings
 
 Browse the other pages listed under the Settings menu to find additional configuration and capabilities. 
 
@@ -345,7 +315,7 @@ development tools.
 
 <img src="./images/image51.png" alt="create auth" width="800">
 
-## IX. Support
+## X. Support
 
 For support, please sign up to our IoT Discourse forum (https://discourse.mozilla.org/c/iot) or email iot@mozilla.com 
 or join us on Mozilla IRC #iot channel 
