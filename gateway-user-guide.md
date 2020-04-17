@@ -47,7 +47,40 @@ On iPhones and iPads:
 
 ## III. Adding and Managing Smart Home Devices
 
+The WebThings Gateway has an add-on system that lets it understand how different connected devices and services ("things") operate. For each type of device (or service) you'll need to install and configure the proper add-on so the gateway can use it to discover and connect to them as things.
+
+A few add-ons are pre-configured as part of the standard gateway installation, especially those required for common smart home devices using Zigbee and Z-Wave communications technologies.  To make sure the gateway can discover all your devices it is best to first make sure all the right add-ons are installed and enabled.
+
+### Add-ons
+
+From the Main Menu, go to Settings and select Add-ons.  From the Add-ons page that appears, click on the "+" icon to bring up an alphabetical list of installable add-ons.  Add any and all Add-ons that correspond to smart devices you have in your home and wish to manage with the gateway, as well as services you may wish to use with your gateway.
+
+As an example, the Weather add-on allows your gateway to connect to an open weather information service and display current conditions.  It is included in the list of available Add-ons, and can be added by clicking "+ Add":
+
+<img src="./images/weather_addon_add.png" alt="weather addon" width="800">
+
+Click on the left arrow icon to return to the list of installed add-ons.  Find the Weather add-on and click "Configure":
+
+<img src="./images/weather_addon_config.png" alt="weather addon configure" width="800">
+
+Configure the weather add-on:
+* Enter the name of the location for which you want to track weather.
+* Enter the latitude and longitude (which you can find on sites like www.latlong.net)
+* You can user the default Open-WeatherMap API key
+
+<img src="./images/weather_addon_configuration.png" alt="weather addon settings" width="800">
+
+Return to the main Things page (https://SUBDOMAIN.mozilla-iot.org/things) and click the "+" icon to add a new thing.  Scanning for new devices should discover the Weather thing with the location name you specified.  Click "Save".
+
+<img src="./images/weather_thing_add.png" alt="add weather thing" width="800">
+
+Now you can view weather data by going to the main Things page to see the installed weather thing:
+
+<img src="./images/weather_thing.png" alt="weather thing" width="800">
+
 ### Scan For and Add Smart Devices
+
+Now that your gateway is setup it's easy to discover connected devices in the environment around you.  By default the Raspberry Pi supports Wi-Fi, Bluetooth and Ethernet.  Additional accessories may be purchased to increase the number of devices your gateway can connect to.
 
 Pick a device to add and prepare it for pairing. Typical preparation steps for Zigbee and Z-Wave devices are as follows:
 * Smart bulb: screw into a light fixture that it is turned on (bulb should be lit when ready for pairing)
@@ -198,7 +231,7 @@ in the lower right corner when done.
 
 <img src="./images/image30.png" alt="position things on floorplan" width="800">
 
-## VII. Add-Ons: Extend your Gateway’s Capabilities
+## VII. More Add-Ons: Further Extend your Gateway’s Capabilities
 
 The gateway has an add-ons system so that you can extend its capabilities. A few add-ons are installed by default 
 (Web Thing, Zigbee, and Z-Wave) so that your gateway will work with a large number of commercial devices right 

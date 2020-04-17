@@ -6,7 +6,7 @@
 
 ### What you will need
 
-![What you need](/images/what_you_need.png)
+![What you need](./images/what_you_need.png)
 
 1. **A [Raspberry Pi®](https://www.raspberrypi.org/products/)** single board computer and power supply (Raspberry Pi 3 recommended, with minimum 2A power supply)
 2. **A microSD card** (At least 8GB, class 10 recommended)
@@ -34,24 +34,27 @@ Once flashing is complete, remove the microSD card.
 
 ### 3. Boot Raspberry Pi
 
-![Plug in](/images/plug_in.png)
+![Plug in](./images/plug_in.png)
 
 1. Insert the flashed microSD card into your Raspberry Pi
 2. Plug in any USB dongles
 3. Connect the power supply to boot the Pi
+4. Check that the LEDs light up: red indicates power, green indicates activity
+5. Wait a few minutes for the software to boot
 
-**Note:** On first boot the Raspberry Pi may take 2-3 minutes to boot.
+**Note:** On first boot the Raspberry Pi may take an additional 2-3 minutes longer to boot in order to take care of some first time setup.
 
 ### 4. Connect Wi-Fi
-When the gateway starts up it will create a Wi-Fi hotspot called "**WebThings Gateway XXXX**" (where XXXX are four digits from your Pi's MAC address). Connect to that Wi-Fi hotspot using your desktop/laptop computer, smartphone or tablet.
+Your gateway will most likely connect to the Internet and also communicate with all your devices via Wi-Fi, which needs to be set up next.
 
+When the gateway starts up it will create a Wi-Fi hotspot called "**WebThings Gateway XXXX**" (where XXXX are four digits from your RPi's MAC address). Use a personal computer or smartphone to scan for and connect to that wireless network.
 <img src="./images/wifi_ssid.png" width="300">
 
-Once connected you should see the WebThings Gateway welcome screen which will then scan for nearby Wi-Fi networks.
+A captive portal page will appear, showing nearby Wi-Fi networks.  
 
-![Connect Wi-Fi](/images/connect_wifi.png)
+![Connect Wi-Fi](./images/connect_wifi.png)
 
-Select your home network from the list and enter your Wi-Fi password to connect.
+Select the desired network and enter the password when prompted.  The "Connecting to WiFi..." page will automatically disappear.
 
 **Notes:**
 * If you are connected to the "WebThings Gateway XXXX" Wi-Fi network but you don't see the welcome screen, you can try typing http://192.168.2.1 into your web browser’s address bar to manually navigate to the page.
@@ -60,13 +63,13 @@ Select your home network from the list and enter your Wi-Fi password to connect.
 
 ### 5. Choose Subdomain
 
-Once you have connected the Pi to your wireless network, you should ensure that your laptop/tablet/smartphone is connected to the same Wi-Fi network and then navigate to **http://gateway.local** in your web browser.
+After you've connected the RPi to your wireless network, you should ensure that your laptop/tablet/smartphone is connected to the same Wi-Fi network and then navigate to **http://gateway.local** in your web browser.
 
 You will then be given the option to register a free subdomain to safely access your gateway over the Internet using a [secure tunnelling service](https://github.com/mozilla-iot/wiki/wiki/Gateway-Remote-Access) provided by Mozilla.
 
-![Choose subdomain](/images/choose_subdomain.png)
+![Choose subdomain](./images/choose_subdomain.png)
 
-Enter your choice of subdomain and an email address in case you need to retrieve it later, then click "Create".
+Enter your choice of subdomain and an email address in case you need to retrieve your subdomain later to re-install on a new gateway. Click "Create" and wait a few moments for the subdomain registration to complete.  Try loading your subdomain on your smartphone or computer by loading https://SUBDOMAIN.mozilla-iot.org (where 'SUBDOMAIN' is the subdomain name you've chosen).
 
 
 **Notes:**
@@ -76,15 +79,15 @@ Enter your choice of subdomain and an email address in case you need to retrieve
  * If you have previously registered a subdomain you want to re-use, enter the subdomain and the email address you used to register it and follow the on-screen instructions to re-claim it.
  
 ### 6. Create User Account
-Once you have registered your subdomain you should be automatically redirected to the next step of the setup process, which is to create your first user account on the gateway. Enter your name, email address and a password then click "Next".
- 
-![Create user account](/images/create_user_account.png)
+Once you have registered your subdomain you should be automatically redirected to the next step of the setup process, which is to create your first user account on the gateway. This is how you'll access the gateway to discover, add, monitor and manage all your connected devices.  Enter your name, email address and a password then click "Next".
+
+![Create user account](./images/create_user_account.png)
  
 ***Note:*** You can create additional user accounts later.
  
 ### Success!
 You should then be redirected to an empty "Things" screen of the gateway where you can start to add devices.
  
-![Things screen](/images/things_screen.png)
+![Things screen](./images/things_screen.png)
  
-See the [WebThings Gateway User Guide](./gateway-user-guide.md) to learn how to use your gateway.
+See the [WebThings Gateway User Guide](./gateway-user-guide.md) to learn how to use your gateway including adding and managing smart devices, creating rules to automate your home, using logging to track data from your devices, and more.
