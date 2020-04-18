@@ -1,6 +1,35 @@
-# Things Gateway by Mozilla
+# Mozilla WebThings
 
-This respository is being used to develop user documentation on how to set up and operate a Things Gateway. The project was initiated and is being led by the Mozilla IoT team, but all are welcome to participate, since the framework is open source, and the development activity is performed openly using communications tools such as IRC, Discourse, and Github issues lists.
+[Mozilla WebThings](https://iot.mozilla.org/) is an open platform for monitoring and controlling devices over the web.
 
-Note: although this guide provides setup information assuming the gateway image is installed on a Raspberry Pi, the main steps for setup and most steps thereafter are platform agnostic.
+It is an open source implementation of emerging [Web of Things](https://www.w3.org/WoT/) standards at the W3C.
 
+## WebThings Gateway
+[WebThings Gateway](https://iot.mozilla.org/gateway/) is a software distribution for smart home gateways which allows users to directly monitor and control their smart home over the web, without a middleman.
+* 📝 [Getting Started Guide - Raspberry Pi](./gateway-getting-started-guide.md)
+* 📝 [User Guide](./gateway-user-guide.md)
+* 🌐 [Supported Hardware](https://github.com/mozilla-iot/wiki/wiki/Supported-Hardware)
+
+### Development
+* 🌐 [Docker Image](https://hub.docker.com/r/mozillaiot/gateway)
+* 🌐 [Build Instructions](https://github.com/mozilla-iot/gateway#readme)
+
+## WebThings Framework
+
+[WebThings Framework](https://iot.mozilla.org/framework/) is a collection of re-usable software components to help developers build their own web things which directly expose the Web Thing API.
+
+### Libraries
+* 🌐 [Node.js](https://github.com/mozilla-iot/webthing-node)
+* 🌐 [Python](https://github.com/mozilla-iot/webthing-python)
+* 🌐 [Java](https://github.com/mozilla-iot/webthing-java)
+* 🌐 [Rust](https://github.com/mozilla-iot/webthing-rust)
+* 🌐 [Arduino](https://github.com/mozilla-iot/webthing-arduino)
+* 🌐 [MicroPython](https://github.com/mozilla-iot/webthing-upy)
+
+### Third Party Libraries
+* 🌐 [IoT.js](https://github.com/rzr/webthing-iotjs)
+* 🌐 [Moddable SDK](https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/network/webthings.md)
+
+## Web Thing API
+* 🌐 [Web Thing API specification](https://iot.mozilla.org/wot/)
+* 🌐 [WoT Capability Schemas](https://iot.mozilla.org/schemas/)
