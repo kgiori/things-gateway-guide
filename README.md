@@ -6,6 +6,7 @@ It is an open source implementation of emerging [Web of Things](https://www.w3.o
 
 ## WebThings Gateway
 [WebThings Gateway](https://iot.mozilla.org/gateway/) is a software distribution for smart home gateways which allows users to directly monitor and control their smart home over the web, without a middleman.
+* 🌐 [Tutorial](https://docs.google.com/document/d/1yR0UcwdvmhzFIOGS-9enoeSiKqHAFlGZY7AkYmiMcXo/edit#heading=h.1y4m2zfpf52f) -- most up to date doc :)
 * 📝 [Getting Started Guide - Raspberry Pi](./gateway-getting-started-guide.md)
 * 📝 [User Guide](./gateway-user-guide.md)
 * 🌐 [Supported Hardware](https://github.com/mozilla-iot/wiki/wiki/Supported-Hardware)
@@ -27,6 +28,7 @@ It is an open source implementation of emerging [Web of Things](https://www.w3.o
 * 🌐 [MicroPython](https://github.com/mozilla-iot/webthing-upy)
 
 ### Third Party Libraries
+* 🌐 [MicroBlocks](https://microblocks.fun/download) - install MicroBlocks IDE then load "Web Thing" library
 * 🌐 [IoT.js](https://github.com/rzr/webthing-iotjs)
 * 🌐 [Moddable SDK](https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/network/webthings.md)
 
