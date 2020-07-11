@@ -28,7 +28,7 @@ It is an open source implementation of emerging [Web of Things](https://www.w3.o
 * 🌐 [MicroPython](https://github.com/mozilla-iot/webthing-upy)
 
 ### Third Party Libraries
-* 🌐 [MicroBlocks](https://microblocks.fun/download) - install MicroBlocks IDE then load "Web Thing" library
+* 🌐 [MicroBlocks](http://microblocks.fun/iot.html) - install MicroBlocks IDE then load "Web Thing" library
 * 🌐 [IoT.js](https://github.com/rzr/webthing-iotjs)
 * 🌐 [Moddable SDK](https://github.com/Moddable-OpenSource/moddable/blob/public/documentation/network/webthings.md)
 
